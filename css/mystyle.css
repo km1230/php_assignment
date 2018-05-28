@@ -1,0 +1,644 @@
+/*======================================================*/
+/* general theme */
+*{
+	box-sizing: border-box;
+	margin: auto;
+	font-family: Helvetica;
+	font-color: #303133;
+	font-size: 1rem;
+}
+
+body{background-color: #eaeaea;}
+
+/*======================================================*/
+/* font faces for each cafe */
+/* Lazenbys */
+@font-face{
+	font-family: 'Sultan Cafe';
+	src: url('./fonts/sultancafe.ttf');
+}
+
+#lazenbysHeading {
+	font-family: 'Sultan Cafe';
+	font-size: 5rem;
+	padding: 0.5rem;
+}
+
+/* The Ref */
+@font-face{
+	font-family: 'Channel Slanted';
+	src: url('./fonts/channel.ttf');
+}
+
+#theRefHeading {
+	font-family: 'Channel Slanted';
+	font-size: 2rem;
+	padding: 1.5rem;
+}
+
+/* Trade Table */
+@font-face{
+	font-family: 'S&S GreyHood Seven';
+	src: url('./fonts/ghs.otf');
+}
+
+#tradeTableHeading {
+	font-family: 'S&S GreyHood Seven';
+	font-size: 4rem;
+	padding: 1rem;
+}
+
+/*======================================================*/
+/* Grid for mobile */
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+/*======================================================*/
+/* Navigation */
+
+/* Top menu bar */
+#menu{
+	background-color: #303133;
+	width: 100%;
+	padding: 10px;
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	left: 0px;
+	z-index: 2;
+}
+
+#menu a{
+	color: white;
+	text-decoration: none;
+	font-size: 1.25rem;
+	padding: 8px;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+nav{background-color: #303133;}
+
+#logo img{
+	float: left;
+	width: 3%;
+	padding: 0px;
+	margin: 0px;
+}
+
+.nav-link{display: none;}
+
+.dropdown{display: none;}
+
+#menuToggle{
+	display: inline-block !important;
+	position: absolute;
+	top: -3px;
+	right: 30px;
+}
+
+/* Hyperlink */
+a{
+	text-decoration: underline;
+	color: inherit;
+	font-size: inherit;
+}
+
+a:hover{
+	background-color: #ffc107;
+	color: white;
+	transition: 0.5s;
+}
+
+#menu a:hover{
+	color: #d02c2c;
+	background-color: #303133;
+}
+
+a.active{
+	background-color: #ccced1 !important;
+	color: #303133 !important;
+	font-weight: bold;
+}
+
+/*======================================================*/
+/* Elements */
+
+/* blank row */
+.rowspace{height: 30px;}
+
+/* conntainer */
+.container{
+	max-width: 94%;
+	margin: auto;
+}
+
+/* row in container */
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+/* div item under row */
+.row div{flex: auto;}
+
+/* theme picture for each page */
+#carousel{
+	height: 225px;
+	overflow: hidden;
+}
+
+#carousel img{
+	max-width: 100%;
+	margin: auto;
+}
+
+/* 'How To Order' picture at index */
+#step{width: 100%;}
+
+/* opening hour in cafe menu */
+.openhour{
+	border: 1px solid;
+	padding: 1rem;
+}
+
+/* displaying balance, wallet in menu and cart */
+.checkmoney{
+	font-weight: bold;
+	font-size: 1rem;
+	border: 1px solid #303133;
+	padding: 1rem;
+}
+
+/* brief cart detail on the right side of each cafe menu */
+#sideCart{
+	margin-top: 0px;
+}
+
+/* sub-heading block in pages */
+.whiteTitle{
+	background-color: white;
+	border: solid black 5px;
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+.greyTitle{
+	background-color: #eaeaea;
+	border: solid black 5px;
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+/* credit card icon */
+.cardImg img{
+	width: 5%;
+}
+
+/*======================================================*/
+/* breadcrumb */
+.breadcrumb {display: none;}
+
+.breadcrumb li{
+	list-style: none;
+	float: left;
+	background-color: #1d4038;
+	color: white;
+	font-weight: bold;
+	padding: 0.1rem 0rem 0.1rem 0rem;
+}
+
+.breadcrumb li::before{
+	display: inline-block;
+	content: ' ';
+	border-top: solid 0.5rem #1d4038;
+	border-left: solid 1rem white;
+	border-bottom: solid 0.5rem #1d4038;
+	left: 100%;
+	margin-top: 1px;
+	z-index: 1;
+}
+
+.breadcrumb li:first-child::before{
+	display: inline-block;
+	background-color: #1d4038;
+	border: none;
+	padding: 0.1rem;
+}
+
+.breadcrumb li::after{
+	display: inline-block;
+	content: ' ';
+	border-top: solid 0.5rem white;
+	border-left: solid 1rem #1d4038;
+	border-bottom: solid 0.5rem white;
+	left: 100%;
+	margin-top: 1px;
+	z-index: 2;
+}
+
+.breadcrumb li:last-child::after{
+	display: inline-block;
+	background-color: #1d4038;
+	border: none;
+	padding: 0.1rem;
+}
+
+/*======================================================*/
+/* table */
+table{
+	border: #303133 solid 0.5rem;
+	width: 100%;
+}
+
+thead{
+	background-color: #303133;
+	color: white;
+}
+
+td{
+	border: #ccced1 groove 0.2rem;
+	text-align: center;
+}
+
+/* menu table */
+.order-table{min-height: 15rem;}
+
+/* master and manager table */
+.master-table-left{width: auto;}
+.master-table td {padding: 1rem;}
+
+/* select fields in allocation table */
+.allocateSelect {
+	min-width: 10rem;
+}
+
+/* sign up table */
+#signupTable{
+	width: 100%;
+	margin: auto;
+}
+
+/* side cart table in cafe menu */
+#sideCartTable{
+	width: 95%;
+}
+
+/* scroll table when overflow (responsive view) in Allocation, MyAccount, MyCart */
+.scrollTable{
+	display: block;
+	overflow-x: scroll;
+}
+
+/*======================================================*/
+/* input fields */
+input{
+	padding: 10px;
+	border: 1px solid #ccced1;
+	border-radius: 5px;
+	width: 100%;
+}
+
+input:focus{
+	outline-color: #d02c2c;
+}
+
+/* checkbox for removing item in master page */
+.removeBox {
+	width: 3rem;
+	height: 1rem;
+	background-color: white;
+	border-radius: 0.5rem;
+	position: relative;
+	transition: 0.4s;
+}
+
+.removeBox label{
+	display: block;
+	width: 1.5rem;
+	height: 1.5rem;
+	background-color: grey;
+	box-shadow: 0.1rem 0.2rem 0.5rem #303133;
+	border-radius: 1rem;
+	position: absolute;
+	top: -0.3rem;
+	left: -0.2rem;
+	transition: 0.4s;
+	z-index: 0;
+}
+
+.remove{
+	opacity: 0;
+	z-index: 1;
+	position: absolute;
+	left: 0;
+	cursor: pointer;
+}
+
+.removeBox input[type=checkbox]:checked + label{
+	left: 2.3rem;
+}
+
+.removeBox input[type=checkbox]:checked{
+	left: 2.4rem;
+}
+
+/* checkbox for selecting item in manager page */
+.manSelectBox {
+	width: 3rem;
+	height: 1rem;
+	background-color: white;
+	border-radius: 0.5rem;
+	position: relative;
+	transition: 0.4s;
+}
+
+.manSelectBox label{
+	display: block;
+	width: 1.5rem;
+	height: 1.5rem;
+	background-color: grey;
+	box-shadow: 0.1rem 0.2rem 0.5rem #303133;
+	border-radius: 1rem;
+	position: absolute;
+	top: -0.3rem;
+	left: -0.2rem;
+	transition: 0.4s;
+	z-index: 0;
+}
+
+.manSelect{
+	opacity: 0;
+	z-index: 1;
+	position: absolute;
+	left: 0;
+	cursor: pointer;
+}
+
+.manSelectBox input[type=checkbox]:checked + label{
+	left: 2.3rem;
+}
+
+.manSelectBox input[type=checkbox]:checked{
+	left: 2.4rem;
+}
+
+/* select completed item in order pages */
+.completeBox {
+	width: 3rem;
+	height: 1rem;
+	background-color: white;
+	border-radius: 0.5rem;
+	position: relative;
+	transition: 0.4s;
+}
+
+.completeBox label{
+	display: block;
+	width: 1.5rem;
+	height: 1.5rem;
+	background-color: grey;
+	box-shadow: 0.1rem 0.2rem 0.5rem #303133;
+	border-radius: 1rem;
+	position: absolute;
+	top: -0.3rem;
+	left: -0.2rem;
+	transition: 0.4s;
+	z-index: 0;
+}
+
+.complete{
+	opacity: 0;
+	z-index: 1;
+	position: absolute;
+	left: 0;
+	cursor: pointer;
+}
+
+.completeBox input[type=checkbox]:checked + label{
+	left: 2.3rem;
+}
+
+.completeBox input[type=checkbox]:checked{
+	left: 2.4rem;
+}
+
+/*======================================================*/
+/* buttons */
+button{
+	border-radius: 5px;
+	text-align: center;
+	font-weight: normal;
+	vertical-align: middle;
+	width: 100%;
+	font-size: 1rem;
+	padding: 10px;
+}
+
+button:focus{
+	outline-color: #d02c2c;
+}
+
+.btn-info{
+	background-color: #17a2b8;
+	border-color: #17a2b8;
+	color: white;
+}
+
+.btn-success{
+	background-color: #28a745;
+	border-color: #28a745;
+	color: white;
+}
+
+.btn-warning{
+	background-color: #ffc107;
+	border-color: #ffc107;
+	color: white;
+}
+
+.btn-alert{
+	background-color: #dc3545;
+	border-color: #dc3545;
+	color: white;
+}
+
+.btn-secondary{
+	background-color: #f8f9fa;
+	border-color: #f8f9fa;
+	color: #303133;
+}
+
+.btn-disabled{
+	background-color: grey;
+	border-color: grey;
+	color: white;
+}
+
+/*======================================================*/
+/* footer for all pages */
+#footer{
+	background-color: #303133;
+	color: white;
+	font-size: 1rem;
+	width: 100%;
+	margin: 0px;
+	padding: 10px;
+	text-align: center;
+}
+
+/* page heading at the middle of all pages */
+.heading{
+	width: 100%;
+	background-color: #303133;
+	text-align: center;
+	padding: 15px;
+	font-size: 2rem;
+	color: white;
+}
+
+/*======================================================*/
+/* miscellaneous displays */
+
+.alert{
+	font-size: 1rem;
+	color: #d02c2c;
+}
+
+.success{
+	font-size: 1rem;
+	color: #28a745;
+}
+
+#pw_meter{width: 100%;}
+
+.mt-1{margin-top: 1rem;}
+.mt-3{margin-top: 3rem;}
+.mt-5{margin-top: 5rem;}
+.mr-1{margin-right: 1rem;}
+.mr-3{margin-right: 3rem;}
+.mr-5{margin-right: 5rem;}
+.mb-1{margin-bottom: 1rem;}
+.mb-3{margin-bottom: 3rem;}
+.mb-5{margin-bottom: 5rem;}
+.ml-1{margin-left: 1rem;}
+.ml-3{margin-left: 3rem;}
+.ml-5{margin-left: 5rem;}
+.m-1{margin: 1rem;}
+.m-3{margin: 3rem;}
+.m-5{margin: 5rem;}
+
+.strong{font-weight: bold;}
+.large{font-size: 2rem;}
+.underline{text-decoration: underline;}
+
+select{width:70%;}
+
+/*======================================================*/
+/* animation */
+
+/* wobble effect */
+@keyframes wobble{
+	0% {transform: translateX(10%) rotate(-15deg);}
+	25% {transform: translateX(-8%) rotate(12deg);}
+	50% {transform: translateX(5%) rotate(-8deg);}
+	75% {transform: translateX(-3%) rotate(5deg);}
+	100% {transform: translateX(0%) rotate(-3deg);}
+}
+
+.wobble{
+	animation-name: wobble;
+	animation-duration: 1.5s;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-out;
+}
+
+/* slide in effect */
+@keyframes slideIn{
+	0% {transform: translateX(-100%);}
+	25% {transform: translateX(25%);}
+	50% {transform: translateX(-12%);}
+	75% {transform: translateX(5%);}
+	100% {transform: translateX(0%);}
+}
+
+.slideIn{
+	animation-name: slideIn;
+	animation-duration: 2s;
+}
+
+/*======================================================*/
+/* Responsive design */
+
+/* Grid for desktop */
+@media only screen and (min-width: 992px){
+	.col-lg-1 {width: 8.33%;}
+	.col-lg-2 {width: 16.66%;}
+	.col-lg-3 {width: 25%;}
+	.col-lg-4 {width: 33.33%;}
+	.col-lg-5 {width: 41.66%;}
+	.col-lg-6 {width: 50%;}
+	.col-lg-7 {width: 58.33%;}
+	.col-lg-8 {width: 66.66%;}
+	.col-lg-9 {width: 75%;}
+	.col-lg-10 {width: 83.33%;}
+	.col-lg-11 {width: 91.66%;}
+	.col-lg-12 {width: 100%;}
+
+/* navigation on desktop */
+	.nav-item{
+		position: relative;
+		display: inline-block;
+	}
+
+	.nav-item ul{list-style: none;}
+
+	.nav-link{
+		display: inline-block !important;
+		vertical-align: middle;
+	}
+
+	.dropdown{
+		position: absolute;
+		display: none;
+	}
+
+	.nav-item:hover .dropdown{
+		display: block;
+		left: 0;
+		min-width: 10rem;
+		background-color: #303133;
+	}
+
+	.nav-item:hover .dropdown a{
+		display: block;
+		padding-bottom: 1rem !important;
+	}
+
+	#menuToggle{display: none !important;}
+
+/* theme picture for each cafe on desktop */
+	#carousel{height: 400px;}
+
+/* table for desktop */
+	table{
+		border: #303133 solid 0.5rem;
+		width: 80%;
+	}
+
+/* breadcrumb for desktop */
+	.breadcrumb{display: block !important;}
+}
+
+/*======================================================*/
